@@ -1,0 +1,6 @@
+{
+  "name": "BCA HOTEL | Barrancabermeja - Confort y Comodidad",
+  "description": "Hotel moderno en el corazón comercial de Barrancabermeja, Santander. Habitaciones confortables, terraza bar y piscina en piso 8, restaurante, salones de eventos y parqueadero cubierto.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

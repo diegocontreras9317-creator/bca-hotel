@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+
+  /* BCA Hotel Official Brand Palette: Black, White, and Warm Cream */
+  --color-bca-black: #0c0c0c;
+  --color-bca-dark: #141414;
+  --color-bca-surface: #1a1a1a;
+  --color-bca-card: #212121;
+  --color-bca-border: #2e2e2e;
+
+  /* Warm Creams / Champagnes */
+  --color-bca-cream: #F5F1E9;
+  --color-bca-cream-light: #FAF8F5;
+  --color-bca-cream-muted: #D9D1C1;
+  --color-bca-cream-warm: #C7BAA3;
+  --color-bca-cream-dark: #8F8269;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    color-scheme: dark;
+    background-color: #0c0c0c;
+    color: #F5F1E9;
+  }
+
+  body {
+    background-color: #0c0c0c;
+    color: #F5F1E9;
+  }
+}
+
+/* Custom serene scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #0c0c0c;
+}
+::-webkit-scrollbar-thumb {
+  background: #2b2b2b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8F8269;
+}
+
+/* Optimización de nitidez para imágenes: evita desenfoque al escalar en navegadores */
+img {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: high-quality;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
