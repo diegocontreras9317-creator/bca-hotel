@@ -176,7 +176,7 @@ export const RoomsPage: React.FC<RoomsPageProps> = ({
                           loading="lazy"
                           decoding="async"
                           className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out transform-gpu ${
-                            currentIdx === imgIdx ? 'opacity-100 z-10 scale-100' : 'opacity-0 z-0 pointer-events-none scale-102'
+                            currentIdx === imgIdx ? 'opacity-100 z-[1] scale-100' : 'opacity-0 z-0 pointer-events-none scale-102'
                           }`}
                         />
                       ))
@@ -189,7 +189,7 @@ export const RoomsPage: React.FC<RoomsPageProps> = ({
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                       />
                     )}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-black/20 z-10 pointer-events-none" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/25 z-10 pointer-events-none" />
 
                     {/* Direct Card Slide Controls */}
                     {hasDirectSlider && (
@@ -205,7 +205,7 @@ export const RoomsPage: React.FC<RoomsPageProps> = ({
                             }));
                           }}
                           aria-label="Foto anterior"
-                          className="absolute left-3 top-1/2 -translate-y-1/2 z-10 w-8 h-8 rounded-full bg-black/55 hover:bg-black/85 text-white flex items-center justify-center backdrop-blur-sm border border-white/15 transition-all cursor-pointer"
+                          className="absolute left-3 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-black/55 hover:bg-black/85 text-white flex items-center justify-center backdrop-blur-sm border border-white/15 transition-all cursor-pointer"
                         >
                           <ChevronLeft className="w-4 h-4" />
                         </button>
@@ -219,11 +219,11 @@ export const RoomsPage: React.FC<RoomsPageProps> = ({
                             }));
                           }}
                           aria-label="Siguiente foto"
-                          className="absolute right-3 top-1/2 -translate-y-1/2 z-10 w-8 h-8 rounded-full bg-black/55 hover:bg-black/85 text-white flex items-center justify-center backdrop-blur-sm border border-white/15 transition-all cursor-pointer"
+                          className="absolute right-3 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-black/55 hover:bg-black/85 text-white flex items-center justify-center backdrop-blur-sm border border-white/15 transition-all cursor-pointer"
                         >
                           <ChevronRight className="w-4 h-4" />
                         </button>
-                        <div className="absolute bottom-3 right-4 z-10 flex items-center gap-1.5">
+                        <div className="absolute bottom-3 right-4 z-20 flex items-center gap-1.5">
                           {room.images.map((_, idx) => (
                             <button
                               key={idx}
@@ -247,7 +247,7 @@ export const RoomsPage: React.FC<RoomsPageProps> = ({
 
                     {/* Room Tag */}
                     {room.highlightTag && (
-                      <div className="absolute top-4 left-4">
+                      <div className="absolute top-4 left-4 z-20">
                         <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#0C0C0C]/85 text-[#FAF8F5] text-xs font-semibold backdrop-blur-md border border-white/10">
                           <Sparkles className="w-3 h-3 text-[#C7BAA3]" />
                           {room.highlightTag}
@@ -256,7 +256,7 @@ export const RoomsPage: React.FC<RoomsPageProps> = ({
                     )}
 
                     {/* Gallery count badge */}
-                    <div className="absolute top-4 right-4">
+                    <div className="absolute top-4 right-4 z-20">
                       <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-black/60 text-white text-[11px] backdrop-blur-md">
                         <Eye className="w-3 h-3 text-[#EAE3D2]" />
                         {hasDirectSlider
@@ -266,11 +266,11 @@ export const RoomsPage: React.FC<RoomsPageProps> = ({
                     </div>
 
                     {/* Bottom Image Overlay Details */}
-                    <div className="absolute bottom-4 left-4 right-4 text-white pointer-events-none">
-                      <h3 className="text-xl sm:text-2xl font-serif font-medium">
+                    <div className="absolute bottom-4 left-4 right-4 pr-16 z-20 text-white pointer-events-none">
+                      <h3 className="text-xl sm:text-2xl font-serif font-medium drop-shadow-sm">
                         {room.name}
                       </h3>
-                      <p className="text-xs text-[#EAE3D2] font-light mt-0.5">
+                      <p className="text-xs text-[#EAE3D2] font-light mt-0.5 drop-shadow-sm">
                         {room.subtitle}
                       </p>
                     </div>
