@@ -65,7 +65,8 @@ export const Hero: React.FC<HeroProps> = ({
             decoding="sync"
             className="w-full h-full object-cover object-center"
           />
-          {/* Background image is now fully visible */}
+          {/* Subtle 15% black overlay */}
+          <div className="absolute inset-0 bg-black/15 z-10" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 w-full flex flex-col justify-center">
