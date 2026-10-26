@@ -14,6 +14,7 @@ import {
   Sparkles,
   Info,
   Clock,
+  Play,
 } from 'lucide-react';
 import { HOTEL_INFO, IMAGES } from '../data/hotelData';
 
@@ -86,28 +87,40 @@ export const TerracePage: React.FC<TerracePageProps> = ({ onOpenBookingModal, on
           </div>
         </div>
 
-        {/* Video Showcase Section */}
-        <div className="mb-16 sm:mb-20 bg-[#FAF8F5] rounded-2xl border border-[#E0D8CA] p-6 sm:p-10 shadow-sm">
-          <div className="text-center max-w-2xl mx-auto mb-8">
-            <span className="text-xs font-semibold tracking-wider text-[#8C7D65] uppercase block mb-1">
-              Recorrido en Video
-            </span>
-            <h2 className="text-2xl sm:text-3xl font-serif text-[#0C0C0C]">
-              Vive la Experiencia de la Terraza & Piscina
-            </h2>
-            <p className="text-xs sm:text-sm text-[#5C564D] mt-2">
-              Explora en movimiento la tranquilidad de nuestra piscina con cascada, el área de solárium y la vista hacia el río Magdalena en Barrancabermeja.
-            </p>
-          </div>
+        {/* Video Showcase Section: Text on Left, Compact Video on Right */}
+        <div className="mb-16 sm:mb-20 bg-[#FAF8F5] rounded-2xl border border-[#E0D8CA] p-6 sm:p-8 lg:p-10 shadow-sm">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            {/* Left Column: Text */}
+            <div className="lg:col-span-6 space-y-4 text-left">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#EFE9DD] text-[#8C7D65] text-xs font-semibold tracking-wider uppercase">
+                <Play className="w-3 h-3 fill-current" />
+                Recorrido en Video
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-serif text-[#0C0C0C] tracking-tight leading-snug">
+                Vive la Experiencia de la Terraza & Piscina
+              </h2>
+              <p className="text-xs sm:text-sm text-[#5C564D] leading-relaxed">
+                Explora en movimiento la tranquilidad de nuestra piscina con cascada en piedra natural, el área de solárium y las amplias vistas panorámicas hacia el río Magdalena en Barrancabermeja.
+              </p>
+              <div className="pt-2 flex flex-wrap gap-2 text-xs text-[#6B6254]">
+                <span className="px-2.5 py-1 bg-[#EFE9DD] rounded-md">Piscina & Cascada</span>
+                <span className="px-2.5 py-1 bg-[#EFE9DD] rounded-md">Vista al Río Magdalena</span>
+                <span className="px-2.5 py-1 bg-[#EFE9DD] rounded-md">Desayuno servido</span>
+              </div>
+            </div>
 
-          <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-lg border border-[#D5CDC0] bg-black">
-            <iframe
-              className="w-full h-full object-cover"
-              src="https://www.youtube.com/embed/GPKi90TiKxc?autoplay=0&mute=0&controls=1"
-              title="Terraza y Piscina BCA Hotel"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
+            {/* Right Column: Compact Video */}
+            <div className="lg:col-span-6 w-full">
+              <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-md border border-[#D5CDC0] bg-black">
+                <iframe
+                  className="w-full h-full object-cover"
+                  src="https://www.youtube.com/embed/TuqWQp0Mx74?autoplay=0&mute=0&controls=1"
+                  title="Terraza y Piscina BCA Hotel"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+            </div>
           </div>
         </div>
 

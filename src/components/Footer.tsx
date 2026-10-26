@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Phone, MessageCircle, Instagram, Clock, Check, ArrowUp } from 'lucide-react';
+import { MapPin, Phone, MessageCircle, Instagram, Clock, Check, ArrowUp, Mail } from 'lucide-react';
 import { BcaLogo } from './BcaLogo';
 import { HOTEL_INFO, IMAGES } from '../data/hotelData';
 
@@ -178,6 +178,19 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 >
                   {HOTEL_INFO.instagramHandle}
                 </a>
+              </div>
+              <div className="flex flex-col gap-1.5 pt-1">
+                <div className="flex items-center gap-2.5">
+                  <Mail className="w-4 h-4 text-[#C7BAA3] shrink-0" />
+                  <a href="mailto:reservas@bcahotel.com" className="hover:text-white transition-colors">
+                    {HOTEL_INFO.emailReservas}
+                  </a>
+                </div>
+                <div className="flex items-center gap-2.5 pl-6">
+                  <a href="mailto:gerencia@bcahotel.com" className="hover:text-white transition-colors text-[11px] text-[#A39988]">
+                    {HOTEL_INFO.emailGerencia}
+                  </a>
+                </div>
               </div>
 
               <div className="flex items-center gap-2.5 pt-1 text-[#FAF8F5]">

@@ -22,7 +22,7 @@ export const InstallationsVideoSection: React.FC = () => {
           <div className="w-full md:w-80 lg:w-96 aspect-video rounded-xl overflow-hidden shadow-md border border-[#D5CDC0] bg-black shrink-0">
             <iframe
               className="w-full h-full object-cover"
-              src="https://www.youtube.com/embed/GPKi90TiKxc?autoplay=0&mute=0&controls=1"
+              src="https://www.youtube.com/embed/TuqWQp0Mx74?autoplay=0&mute=0&controls=1"
               title="Nuestras Instalaciones - BCA Hotel"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
