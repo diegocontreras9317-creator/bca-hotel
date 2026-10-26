@@ -165,16 +165,31 @@ export const RoomsPage: React.FC<RoomsPageProps> = ({
                 className="bg-[#FAF8F5] rounded-2xl overflow-hidden border border-[#E0D8CA] hover:border-[#C7BAA3] transition-all duration-300 shadow-sm hover:shadow-lg flex flex-col justify-between group"
               >
                 <div>
-                  {/* Image Presentation */}
                   <div className="relative h-64 sm:h-72 overflow-hidden bg-[#242424]">
-                    <img
-                      src={mainImg}
-                      alt={hasDirectSlider ? `${room.name} - Foto ${currentIdx + 1}` : room.name}
-                      loading="lazy"
-                      decoding="async"
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-black/20" />
+                    {/* Stacked Images for Instant Zero-Latency Carousel Switching */}
+                    {hasDirectSlider ? (
+                      room.images.map((imgSrc, imgIdx) => (
+                        <img
+                          key={imgIdx}
+                          src={imgSrc}
+                          alt={`${room.name} - Foto ${imgIdx + 1}`}
+                          loading="lazy"
+                          decoding="async"
+                          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out transform-gpu ${
+                            currentIdx === imgIdx ? 'opacity-100 z-10 scale-100' : 'opacity-0 z-0 pointer-events-none scale-102'
+                          }`}
+                        />
+                      ))
+                    ) : (
+                      <img
+                        src={mainImg}
+                        alt={room.name}
+                        loading="lazy"
+                        decoding="async"
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      />
+                    )}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-black/20 z-10 pointer-events-none" />
 
                     {/* Direct Card Slide Controls */}
                     {hasDirectSlider && (
