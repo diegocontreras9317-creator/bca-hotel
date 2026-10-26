@@ -53,6 +53,7 @@ import recepcionImg from '../assets/images/recepcion.jpeg';
 import lobbyImg from '../assets/images/lobby.jpeg';
 import cafeteriaImg from '../assets/images/cafeteria.jpeg';
 import cafeteria2Img from '../assets/images/cafeteria_2.jpeg';
+import logoImg from '../assets/images/logo_bca_hotel.png';
 
 export const HOTEL_INFO = {
   name: 'BCA HOTEL',
@@ -74,6 +75,7 @@ export const HOTEL_INFO = {
 
 export const IMAGES = {
   // Secciones
+  logo: logoImg,
   hero: heroImg,
   facade: heroImg, // Alias retrocompatible
   roomsHeader: twinRoom1Img,

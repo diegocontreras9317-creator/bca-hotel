@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Phone, MessageCircle, Menu, X, MapPin, Clock, CalendarCheck } from 'lucide-react';
 import { BcaLogo } from './BcaLogo';
-import { HOTEL_INFO } from '../data/hotelData';
+import { HOTEL_INFO, IMAGES } from '../data/hotelData';
 
 export type PageId = 'inicio' | 'habitaciones' | 'terraza';
 
@@ -91,8 +91,8 @@ export const Navbar: React.FC<NavbarProps> = ({
             onClick={() => handlePageClick('inicio')}
             className="group flex items-center gap-3 transition-transform hover:opacity-90 cursor-pointer text-left"
           >
-            <div className="bg-[#050505] px-3.5 py-1.5 rounded-md border border-[#2B2B2B]">
-              <BcaLogo size="sm" variant="cream" />
+            <div className="bg-transparent flex items-center justify-center">
+              <BcaLogo size="md" variant="cream" logoImage={IMAGES.logo} />
             </div>
             <div className="hidden lg:flex flex-col">
               <span className="text-[10px] tracking-[0.25em] text-[#C7BAA3] font-medium uppercase">

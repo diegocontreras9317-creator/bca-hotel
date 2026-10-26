@@ -4,24 +4,39 @@ interface BcaLogoProps {
   className?: string;
   size?: 'sm' | 'md' | 'lg' | 'xl';
   variant?: 'white' | 'cream' | 'monochrome';
+  logoImage?: string;
 }
 
 export const BcaLogo: React.FC<BcaLogoProps> = ({
   className = '',
   size = 'md',
   variant = 'white',
+  logoImage,
 }) => {
   const sizeMap = {
-    sm: { height: 34, subSize: 'text-[0.5rem]', tracking: 'tracking-[0.4em]' },
-    md: { height: 44, subSize: 'text-[0.6rem]', tracking: 'tracking-[0.45em]' },
-    lg: { height: 56, subSize: 'text-[0.75rem]', tracking: 'tracking-[0.5em]' },
-    xl: { height: 72, subSize: 'text-[0.95rem]', tracking: 'tracking-[0.55em]' },
+    sm: { height: 42, subSize: 'text-[0.5rem]', tracking: 'tracking-[0.4em]' },
+    md: { height: 52, subSize: 'text-[0.6rem]', tracking: 'tracking-[0.45em]' },
+    lg: { height: 64, subSize: 'text-[0.75rem]', tracking: 'tracking-[0.5em]' },
+    xl: { height: 80, subSize: 'text-[0.95rem]', tracking: 'tracking-[0.55em]' },
   };
 
   const current = sizeMap[size];
 
   const strokeColor = variant === 'cream' ? '#F5F1E9' : '#FFFFFF';
   const subtitleColor = variant === 'cream' ? 'text-[#FAF8F5]' : 'text-white';
+
+  if (logoImage) {
+    return (
+      <div className={`inline-flex items-center justify-center select-none w-full h-full ${className}`}>
+        <img
+          src={logoImage}
+          alt="BCA HOTEL"
+          style={{ height: `${current.height}px` }}
+          className="w-auto h-full max-h-[64px] object-contain block"
+        />
+      </div>
+    );
+  }
 
   return (
     <div className={`inline-flex flex-col items-center select-none font-sans ${className}`}>

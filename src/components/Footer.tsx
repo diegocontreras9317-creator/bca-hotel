@@ -1,7 +1,7 @@
 import React from 'react';
 import { MapPin, Phone, MessageCircle, Instagram, Clock, Check, ArrowUp } from 'lucide-react';
 import { BcaLogo } from './BcaLogo';
-import { HOTEL_INFO } from '../data/hotelData';
+import { HOTEL_INFO, IMAGES } from '../data/hotelData';
 
 interface FooterProps {
   onNavigate?: (page: 'inicio' | 'habitaciones' | 'terraza') => void;
@@ -25,8 +25,8 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-[#1C1C1C]">
           {/* Col 1: Brand & Identity */}
           <div className="space-y-4">
-            <div className="inline-block bg-[#050505] p-3 rounded-lg border border-[#262626]">
-              <BcaLogo size="md" variant="cream" />
+            <div className="inline-block bg-transparent">
+              <BcaLogo size="md" variant="cream" logoImage={IMAGES.logo} />
             </div>
             <p className="text-xs text-[#8F8269] leading-relaxed font-light">
               Tu confort y comodidad en el corazón comercial de Barrancabermeja, Santander. Alojamiento contemporáneo, piscina con cascada en piso 8, desayuno incluido en terraza con vista al río Magdalena, servicio de WiFi en todas las áreas y parqueadero cubierto gratuito.
