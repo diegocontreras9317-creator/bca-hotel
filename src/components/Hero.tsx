@@ -65,9 +65,7 @@ export const Hero: React.FC<HeroProps> = ({
             decoding="sync"
             className="w-full h-full object-cover object-center"
           />
-          {/* Lighter, balanced gradient overlay: allows the hotel facade to be clearly seen and appreciated, while keeping text readable */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0C0C0C]/80 via-[#0C0C0C]/40 to-black/20" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0C0C0C]/60 via-transparent to-black/20" />
+          {/* Background image is now fully visible */}
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 w-full flex flex-col justify-center">
