@@ -3,19 +3,80 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary Meta Tags -->
     <title>BCA HOTEL | Barrancabermeja - Confort y Comodidad</title>
+    <meta name="title" content="BCA HOTEL | Barrancabermeja - Confort y Comodidad" />
     <meta name="description" content="Hotel moderno en el corazón comercial de Barrancabermeja, Santander. Habitaciones confortables, terraza bar y piscina en piso 8, restaurante, salones de eventos y parqueadero cubierto." />
-    <meta property="og:title" content="BCA HOTEL | Barrancabermeja - Confort y Comodidad" />
-    <meta property="og:description" content="Hotel moderno en el corazón comercial de Barrancabermeja, Santander. Habitaciones confortables, terraza bar y piscina en piso 8, restaurante, salones de eventos y parqueadero cubierto." />
+    <meta name="keywords" content="BCA Hotel, Hotel Barrancabermeja, Alojamiento Barrancabermeja, Hotel con piscina Barrancabermeja, Reserva Hotel Barrancabermeja" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#0C0C0C" />
+
+    <!-- OpenGraph / Facebook / WhatsApp -->
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="BCA HOTEL" />
+    <meta property="og:title" content="BCA HOTEL | Barrancabermeja - Confort y Comodidad" />
+    <meta property="og:description" content="Hotel moderno en el corazón comercial de Barrancabermeja, Santander. Habitaciones confortables, terraza bar y piscina en piso 8, salones de eventos y parqueadero cubierto." />
+
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="BCA HOTEL | Barrancabermeja - Confort y Comodidad" />
+    <meta name="twitter:description" content="Hotel moderno en el corazón comercial de Barrancabermeja, Santander. Habitaciones confortables, terraza bar y piscina en piso 8, salones de eventos y parqueadero cubierto." />
+
+    <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Schema.org JSON-LD Structured Data for Google Search -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Hotel",
+      "name": "BCA HOTEL",
+      "description": "Hotel moderno en el corazón comercial de Barrancabermeja, Santander. Habitaciones confortables, terraza bar y piscina con cascada en piso 8, salones de eventos y parqueadero cubierto.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Calle 51 # 8b - 27, Sector Comercial",
+        "addressLocality": "Barrancabermeja",
+        "addressRegion": "Santander",
+        "addressCountry": "CO"
+      },
+      "telephone": "+57 3133777852",
+      "email": "reservas@bcahotel.com.co",
+      "checkinTime": "15:00",
+      "checkoutTime": "13:00",
+      "starRating": {
+        "@type": "Rating",
+        "ratingValue": "4.8"
+      },
+      "amenityFeature": [
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Piscina con cascada",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Parqueadero subterráneo gratuito",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "WiFi de alta velocidad",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Desayuno incluido en terraza",
+          "value": true
+        }
+      ]
+    }
+    </script>
   </head>
   <body class="bg-[#0C0C0C] text-[#FAF8F5] antialiased font-sans selection:bg-[#FAF8F5] selection:text-[#0C0C0C]">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
-

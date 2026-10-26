@@ -32,7 +32,14 @@ export const TerracePage: React.FC<TerracePageProps> = ({ onOpenBookingModal, on
     <div className="bg-[#F7F4EE] text-[#0C0C0C] min-h-screen">
       {/* Top Banner Header */}
       <div className="bg-[#0E0E0E] text-[#FAF8F5] pt-10 pb-16 sm:pb-20 border-b border-[#242424] relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/35" />
+        <div className="absolute inset-0 z-0">
+          <img
+            src={IMAGES.piscina3}
+            alt="Terraza y Piscina BCA Hotel"
+            className="w-full h-full object-cover object-center"
+          />
+        </div>
+        <div className="absolute inset-0 z-0 bg-gradient-to-r from-black/85 via-black/60 to-black/40" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Breadcrumb */}
