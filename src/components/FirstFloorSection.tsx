@@ -60,6 +60,8 @@ export const FirstFloorSection: React.FC = () => {
                 <img
                   src={space.src}
                   alt={space.title}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/10 opacity-70 group-hover:opacity-90 transition-opacity" />

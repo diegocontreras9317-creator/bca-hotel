@@ -56,6 +56,9 @@ export const RoomsPage: React.FC<RoomsPageProps> = ({
           <img
             src={IMAGES.roomsHeader}
             alt="Habitaciones BCA Hotel"
+            loading="eager"
+            fetchPriority="high"
+            decoding="sync"
             className="w-full h-full object-cover object-center"
           />
         </div>
@@ -167,6 +170,8 @@ export const RoomsPage: React.FC<RoomsPageProps> = ({
                     <img
                       src={mainImg}
                       alt={hasDirectSlider ? `${room.name} - Foto ${currentIdx + 1}` : room.name}
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-black/20" />

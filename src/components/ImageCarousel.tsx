@@ -92,15 +92,17 @@ export const ImageCarousel: React.FC<ImageCarouselProps> = ({
         return (
           <div
             key={index}
-            className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
+            className={`absolute inset-0 bg-[#1C1A17] transition-opacity duration-700 ease-in-out transform-gpu ${
               isActive ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
             }`}
           >
             <img
               src={slide.src}
               alt={slide.alt}
+              loading={index === 0 ? 'eager' : 'lazy'}
+              decoding="async"
               onClick={() => onImageClick?.(index)}
-              className={`w-full h-full object-cover transition-transform duration-700 cursor-pointer ${
+              className={`w-full h-full object-cover transition-transform duration-700 cursor-pointer transform-gpu ${
                 isActive ? 'scale-100' : 'scale-105'
               }`}
             />

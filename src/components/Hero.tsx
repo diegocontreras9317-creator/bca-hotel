@@ -60,6 +60,9 @@ export const Hero: React.FC<HeroProps> = ({
           <img
             src={IMAGES.hero}
             alt="Fachada BCA HOTEL Barrancabermeja"
+            loading="eager"
+            fetchPriority="high"
+            decoding="sync"
             className="w-full h-full object-cover object-center"
           />
           {/* Lighter, balanced gradient overlay: allows the hotel facade to be clearly seen and appreciated, while keeping text readable */}

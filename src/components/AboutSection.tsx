@@ -99,6 +99,8 @@ export const AboutSection: React.FC = () => {
               <img
                 src={IMAGES.about}
                 alt="Lobby y Recepción BCA HOTEL Barrancabermeja"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-[480px] sm:h-[560px] lg:h-[640px] object-cover object-center"
               />
             </div>

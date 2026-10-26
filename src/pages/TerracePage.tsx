@@ -36,6 +36,9 @@ export const TerracePage: React.FC<TerracePageProps> = ({ onOpenBookingModal, on
           <img
             src={IMAGES.piscina3}
             alt="Terraza y Piscina BCA Hotel"
+            loading="eager"
+            fetchPriority="high"
+            decoding="sync"
             className="w-full h-full object-cover object-center"
           />
         </div>
@@ -100,7 +103,7 @@ export const TerracePage: React.FC<TerracePageProps> = ({ onOpenBookingModal, on
           <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-lg border border-[#D5CDC0] bg-black">
             <iframe
               className="w-full h-full object-cover"
-              src="https://www.youtube.com/embed/ScMzIvxBSi4?autoplay=0&mute=1&loop=1&playlist=ScMzIvxBSi4&controls=1"
+              src="https://www.youtube.com/embed/GPKi90TiKxc?autoplay=0&mute=0&controls=1"
               title="Terraza y Piscina BCA Hotel"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
@@ -114,7 +117,9 @@ export const TerracePage: React.FC<TerracePageProps> = ({ onOpenBookingModal, on
             <img
               src={IMAGES.terracePool}
               alt="Piscina y cascada en Terraza BCA Hotel"
-              className="w-full h-80 sm:h-96 object-cover transition-transform duration-700 group-hover:scale-102"
+              loading="lazy"
+              decoding="async"
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-102"
             />
             <div className="absolute top-4 left-4">
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#0C0C0C]/85 text-[#FAF8F5] text-xs font-semibold backdrop-blur-md">
@@ -234,7 +239,9 @@ export const TerracePage: React.FC<TerracePageProps> = ({ onOpenBookingModal, on
             <img
               src={IMAGES.terraceBreakfast}
               alt="Desayuno Terraza BCA Hotel"
-              className="w-full h-80 sm:h-96 object-cover transition-transform duration-700 group-hover:scale-102"
+              loading="lazy"
+              decoding="async"
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-102"
             />
             <div className="absolute top-4 left-4">
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#0C0C0C]/85 text-[#FAF8F5] text-xs font-semibold backdrop-blur-md">

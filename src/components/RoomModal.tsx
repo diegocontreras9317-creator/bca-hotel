@@ -52,6 +52,8 @@ export const RoomModal: React.FC<RoomModalProps> = ({ room, onClose }) => {
             <img
               src={room.images[currentImageIdx]}
               alt={`${room.name} - Imagen ${currentImageIdx + 1}`}
+              loading="eager"
+              decoding="async"
               className="w-full h-full object-contain transition-all duration-500"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
