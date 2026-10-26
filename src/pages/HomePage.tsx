@@ -52,11 +52,11 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenBookingModal, onNaviga
         onNavigateToTerrace={() => onNavigate('terraza')}
       />
 
-      {/* Quick Highlights Bar */}
-      <Highlights />
-
       {/* About Hotel & Corporate Identity */}
       <AboutSection />
+
+      {/* Quick Highlights Bar */}
+      <Highlights />
 
       {/* Dedicated Preview Cards: Habitaciones & Terraza */}
       <section className="py-16 sm:py-20 bg-[#F7F4EE] border-b border-[#E5DFD3]">
