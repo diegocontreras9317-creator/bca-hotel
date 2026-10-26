@@ -102,7 +102,8 @@ Por favor confírmenme disponibilidad y tarifa final. ¡Muchas gracias!`;
                 min={today}
                 value={checkIn}
                 onChange={(e) => setCheckIn(e.target.value)}
-                className="w-full bg-white border border-[#DCD5C7] rounded-lg px-3.5 py-2.5 text-xs text-[#0C0C0C] focus:outline-none focus:border-[#0C0C0C]"
+                onClick={(e) => e.currentTarget.showPicker?.()}
+                className="w-full bg-white border border-[#DCD5C7] rounded-lg px-3.5 py-2.5 text-xs text-[#0C0C0C] focus:outline-none focus:border-[#0C0C0C] cursor-pointer"
                 required
               />
             </div>
@@ -117,7 +118,8 @@ Por favor confírmenme disponibilidad y tarifa final. ¡Muchas gracias!`;
                 min={checkIn || today}
                 value={checkOut}
                 onChange={(e) => setCheckOut(e.target.value)}
-                className="w-full bg-white border border-[#DCD5C7] rounded-lg px-3.5 py-2.5 text-xs text-[#0C0C0C] focus:outline-none focus:border-[#0C0C0C]"
+                onClick={(e) => e.currentTarget.showPicker?.()}
+                className="w-full bg-white border border-[#DCD5C7] rounded-lg px-3.5 py-2.5 text-xs text-[#0C0C0C] focus:outline-none focus:border-[#0C0C0C] cursor-pointer"
                 required
               />
             </div>

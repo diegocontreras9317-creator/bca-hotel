@@ -145,7 +145,8 @@ export const Hero: React.FC<HeroProps> = ({
                   value={checkIn}
                   min={today}
                   onChange={(e) => setCheckIn(e.target.value)}
-                  className="w-full bg-white border border-[#DCD5C7] rounded-lg px-3 py-2.5 text-xs text-[#121212] focus:outline-none focus:border-[#121212] transition-colors"
+                  onClick={(e) => e.currentTarget.showPicker?.()}
+                  className="w-full bg-white border border-[#DCD5C7] rounded-lg px-3 py-2.5 text-xs text-[#121212] focus:outline-none focus:border-[#121212] transition-colors cursor-pointer"
                   required
                 />
               </div>
@@ -160,7 +161,8 @@ export const Hero: React.FC<HeroProps> = ({
                   value={checkOut}
                   min={checkIn || today}
                   onChange={(e) => setCheckOut(e.target.value)}
-                  className="w-full bg-white border border-[#DCD5C7] rounded-lg px-3 py-2.5 text-xs text-[#121212] focus:outline-none focus:border-[#121212] transition-colors"
+                  onClick={(e) => e.currentTarget.showPicker?.()}
+                  className="w-full bg-white border border-[#DCD5C7] rounded-lg px-3 py-2.5 text-xs text-[#121212] focus:outline-none focus:border-[#121212] transition-colors cursor-pointer"
                   required
                 />
               </div>
